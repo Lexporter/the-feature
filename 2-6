@@ -1,0 +1,15 @@
+package helloJava;
+import java.util.Scanner;
+public class haha {
+
+	public static void main(String[] args) {
+		Scanner input =new Scanner(System.in );
+		System.out .print("Enter a degree in Fahrenheit: ");
+    	double Fahrenheit = input.nextDouble();
+    	
+    	// Convert Fahrenheit to Celsius
+    	double Celsius = (5.0 / 9) * (Fahrenheit - 32);
+		System.out .println("Fahrenheit " + Fahrenheit + " is " + Celsius + " in Celsius");
+	}
+
+}
