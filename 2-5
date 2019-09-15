@@ -1,0 +1,15 @@
+package helloJava;
+import java.util.Scanner;
+public class haha {
+
+	public static void main(String[] args) {
+		Scanner input =new Scanner(System.in );
+		// Prompt the user to enter three numbers
+		System.out .print("Enter a integer for seconds: ");
+		int seconds = input.nextInt();
+		int minutes = seconds / 60; // Find minutes in seconds 
+		int remainingseconds = seconds % 60;
+		System.out .println(seconds + "Seconds is " + minutes + " minutes and " + remainingseconds + " seconds");
+	}
+
+}
