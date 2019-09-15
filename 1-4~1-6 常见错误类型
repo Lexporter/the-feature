@@ -1,0 +1,38 @@
+//1-4 两处语法错误
+package helloJava;
+
+public class haha {
+
+	public static  main(String[] args) {   //main方法前要有关键字void
+		System.out.println("Welcome to Java);//缺少对应的分号
+	}
+
+}
+
+//1-5 运行时错误
+package helloJava;
+
+public class haha {
+
+	public static void main(String[] args) {
+		System.out.println(1/0); //0不可以作为除数
+	}
+
+}
+
+//1-6 逻辑错误
+package helloJava;
+
+public class haha {
+
+	public static void main(String[] args) {
+		System.out.println("Celsius 35 is Fahrenheit degree ");
+		System.out.println((9 / 5)* 35 +32);
+	}
+
+}
+//输出结果：
+//Celsius 35 is Fahrenheit degree 
+//67
+//原因：答案应为95.0，但是因为整数相除返回的是出发的整数部分，所以9/5=1。
+//改正：9.0/5
