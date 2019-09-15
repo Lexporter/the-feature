@@ -1,0 +1,10 @@
+//两处语法错误
+package helloJava;
+
+public class haha {
+
+	public static  main(String[] args) {   //main方法前要有关键字void
+		System.out.println("Welcome to Java);//缺少对应的分号
+	}
+
+}
