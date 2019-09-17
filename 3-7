@@ -1,0 +1,20 @@
+package hellojava;
+import java.util.*;
+public class hellojava {
+
+	public static void main(String[] args) {
+		// Create a Scanner
+		Scanner input = new Scanner(System.in);
+		
+		// receive an integer
+		System.out.print("Enter a year: ");
+		int year = input.nextInt();
+		
+		// Check if the year is a leap year
+		  boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+		  
+		//display the result
+		System.out.println(year + "is a leap year? " + isLeapYear);
+	}
+
+}
