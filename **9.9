@@ -1,0 +1,88 @@
+package 正多边形;
+public class RegularPolygon {
+	
+	// 多边形的边数
+	private int n;
+	
+	public void setN(int num) {
+		n=num;
+	}
+	
+	public int getN() {
+		return n;
+	}
+	
+	// 边的长度
+	private double side;
+	
+	public void setSide(int w) {
+		side = w;
+	}
+	
+	public double getSide() {
+		return side;
+	}
+	
+	//定义多边形中的点的坐标
+	private double x;
+	private double y;
+	
+	public void setXY(double xi, double yi) {
+		x = xi;
+		y = yi;
+	}
+	
+	public double getX() {
+		return x;
+	}
+	
+	public double getY() {
+		return y;
+	}
+	// 初始化
+	public RegularPolygon() {
+		n = 3;
+		side = 1;
+		x = 0;
+		y = 0;
+	}
+	
+	// 
+	public RegularPolygon(int num, double w) {
+		n = num;
+		side = w;
+	}
+	
+	public RegularPolygon(int num, double w, double xi,double yi) {
+		n = num;
+		side = w;
+		x = xi;
+		y = yi;
+	}
+	
+	public double getPerimeter() {
+		return n * side;
+	}
+	
+	public double getArea() {
+		return (n * side * side) / (4 * Math.tan(Math.PI / n));
+	}
+}
+
+--------------------------------------
+package 正多边形;
+
+public class ans {
+	public static void main(String[] args) {
+	RegularPolygon a = new RegularPolygon();
+	RegularPolygon b = new RegularPolygon(6,4);
+	RegularPolygon c = new RegularPolygon(10,4,5.6,7.8);
+	
+	System.out.println("The perimeter of a is " + a.getPerimeter());
+	System.out.println("The area of a is " + a.getArea() + "\n");
+	System.out.println("The perimeter of b is " + b.getPerimeter());
+	System.out.println("The area of b is " + b.getArea() + "\n");
+	System.out.println("The perimeter of c is " + c.getPerimeter());
+	System.out.println("The area of c is " + c.getArea() + "\n");
+	}
+}
