@@ -1,0 +1,19 @@
+package helloJava;
+import java.util.*;
+public class haha {
+
+	public static void main(String[] args) {
+		/*Create a circle with radius 5.0*/
+		CircleWithPrivareDataFields myCircle = new CircleWithPrivareDataFields(5);
+		System.out.println("The area of the circle of radius " +myCircle.getRadius() +  " is "
+				 + myCircle.getArea());
+		
+		//Increase mycirCle's radius by 10%
+		 myCircle.setRadius( myCircle.getRadius() * 1.1);
+		 System.out.println("The area of the circle of radius " +myCircle.getRadius() +  " is "
+				 + myCircle.getArea());
+		 
+		 System.out.println("The number of objects created is "+ CircleWithPrivareDataFields.getNumberOfObjects());
+	}
+}
+	 
