@@ -1,0 +1,30 @@
+package helloJava;
+
+import java.util.*;
+
+public class Caculate {
+	public static void main(String[] arg) {
+		ArrayList<Object> answer = new ArrayList<>();
+		int num1 = (int)(Math.random()*10);
+		int num2 = (int)(Math.random()*10);
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("What is " + num1 + "+ " + num2 + "? ");
+		boolean flag = false;
+		while(!flag) {
+			int ans = input.nextInt();
+			if(ans == num1 + num2)
+				flag = true;
+			else if(answer.contains(ans))
+				System.out.println("Warning! You're enter this number again, please try again." + "What is " + num1 + "+ " + num2 + "? ");
+			else {
+				System.out.println("Wrong answer. Try again.What is " + num1 + "+ " + num2 + "? ");
+				answer.add(ans);
+			}
+		}
+		
+		System.out.println("You got it!");
+	}
+	
+}
