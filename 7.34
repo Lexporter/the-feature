@@ -1,0 +1,20 @@
+package helloJava;
+import java.util.*;
+public class haha {
+
+	public static void main(String[] args){
+		Scanner cin = new Scanner(System.in);
+		System.out.println("Enter a string:");
+		String str = cin.nextLine();
+		str = sort(str);
+		System.out.println(str);
+	}
+ 
+	public static String sort(String s){
+		char[] chs = s.toCharArray();
+		Arrays.sort(chs);
+		String result = String.valueOf(chs);
+		return result;
+	}
+}
+	 
