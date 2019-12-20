@@ -1,0 +1,33 @@
+package helloJava;
+import java.util.*;
+public class haha {
+
+	public static void main(String[] args){
+		int a[] = new int[101];
+		int b[] = new int[101];
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter an integer m: ");
+		int m = input.nextInt();
+		int h = 2, n = 0,re = m;
+		while(m > 1) {
+			a[n] = h;
+			while(m % h == 0) {
+				b[n]++;
+				m /= h;
+			}
+			while(m % h != 0 && m > 1) {
+				h++;
+			}
+			n++;
+		}
+		int ans = 1;
+		for(int i=0;i<n;i++) {
+			if(b[i]%2!=0) {
+				ans*=a[i];
+			}
+		}
+		System.out.println("The smallest number n for m * n to be a perfect square is "
+				+ ans + "\nm * n is " + ans * re);
+	}
+}
+	 
